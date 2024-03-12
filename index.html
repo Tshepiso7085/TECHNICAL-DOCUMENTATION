@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../TECHNICAL-DOCUMENTATION/CSS/styles.css">
+    <title>PYTHON</title>
+</head>
+<body>
+    <h1></h1>
+    <nav id="nav-bar">
+        <header>PYTHON</header>
+        <a class="nav-link" id="nav1" href="#INTRODUCTION"> INTRODUCTION </a>
+        <a class="nav-link" href="#ADVANTAGES_OF_PYTHON"> ADVANTAGES OF PYTHON </a>
+        <a class="nav-link" href="#Variables"> Variables </a>
+        <a class="nav-link" href="#Strings"> Strings </a>
+        <a class="nav-link" href="#Dictionaries"> Dictionaries </a>
+        <a class="nav-link" href="#FOR_LOOPS"> FOR LOOPS </a>
+        
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="INTRODUCTION"> 
+            <header> INTRODUCTION </header>
+             <p>Python is a programming language that allows you to write an application in one platform and be able to use it on every other platform that you need to support.  Because of the way Python works, you find it used in all sorts of fields that are filled with nonprogrammers. Some people view Python as a scripted language, but it really is so much more.</p>
+             <p> Python emphasizes: </p>
+             <li>Code Readability</li>
+             <li>Concise syntax that lets you write applications using fewer lines.</li>
+             
+        </section>
+        <section class="main-section" id="ADVANTAGES_OF_PYTHON"> 
+            <header> ADVANTAGES OF PYTHON </header>
+                <p> Comparing one language to another is somewhat dangerous because the selection of a language is just as much a matter of taste and personal preference as it is any sort of quantifiable scientific fact. </p>
+                <p> But Python has advantages that put it ahead of the other languages. Advantages such as:</p>
+                <li>Significantly easier to learn</li>
+                <li>Smaller (more concise) code</li>
+                <li>Supported fully as open source</li>
+                <li>Better multiplatform support</li>
+                <li>Easily allows use of multiple development environments</li>
+                <li>Easier to extend using Java and C/C++
+                </li>
+                <li>Enhanced scientific and engineering support
+                </li>
+            </section>
+        <section class="main-section" id="Variables"> 
+            <header>Variables</header> 
+                <p> In Python, Variables specifies names that you can assign values to, allowing you to reuse them later on.</p>
+                <p>A variable never has any type information or constraints associated with it. The notion of type lives with objects, not names. Variables are generic in nature; they always simply refer to a particular object at a particular point in time.
+                </p>
+            <li>E.G.:</li>
+                <code>x = 1</code>
+            <P>or</P>
+                <code>msg = “Hi, I’m a message!”</code>
+                
+        </section>
+        <section class="main-section" id="Strings"> 
+            <header> Strings</header> 
+                <p> Strings are used to record textual information as well as arbitrary collections of bytes. They are our first example of what we call a sequence in Python—that is, a positionally ordered collection of other objects.</p>
+                <p>Sequences maintain a left-to-right order among the items they contain: their items are stored and fetched by their relative position.</p>
+                <p>Strictly speaking, strings are sequences of one-character strings; other types of sequences include lists and tuples, covered later.</p>
+                <li>Sequence Operations 
+                    <p>As sequences, strings support operations that assume a positional ordering among
+                    items. For example, if we have a four-character string, we can verify its length with the
+                    built-in len function and fetch its components with indexing expressions:</p>
+                </li>
+
+                <code>>>> S = 'Spam'
+                    >>> len(S) 
+                    4
+                    >>> S[0]
+                    'S'
+                    >>> S[1] 
+                    'p'
+                    </code>
+        </section>
+        <section class="main-section" id="Dictionaries"> 
+            <header> Dictionaries </header>
+                <p>Python dictionaries are something completely different (Monty Python reference
+                    intended)—they are not sequences at all, but are instead known as mappings. Mappings
+                    are also collections of other objects, but they store objects by key instead of by relative
+                    position. In fact, mappings don’t maintain any reliable left-to-right order; they simply
+                    map keys to associated values. Dictionaries, the only mapping type in Python’s core
+                    objects set, are also mutable: they may be changed in-place and can grow and shrink
+                    on demand, like lists.
+                    </p>
+                    <header>
+                        Mapping Operations
+                    </header>
+                <p> When written as literals, dictionaries are coded in curly braces and consist of a series
+                    of “key: value” pairs. Dictionaries are useful anytime we need to associate a set of values
+                    with keys—to describe the properties of something, for instance. As an example, consider the following three-item dictionary (with keys “food,” “quantity,” and “color”):
+                    </p>
+                <code>>>> D = {'food': 'Spam', 'quantity': 4, 'color': 'pink'}</code>
+                <P>We can index this dictionary by key to fetch and change the keys’ associated values.
+                    The dictionary index operation uses the same syntax as that used for sequences, but
+                    the item in the square brackets is a key, not a relative position:
+                </P>
+                <code>>>> D['food'] 
+                    'Spam'
+                    >>> D['quantity'] += 1 
+                    >>> D
+                    {'food': 'Spam', 'color': 'pink', 'quantity': 5}</code>
+                <p>Although the curly-braces literal form does see use, it is perhaps more common to see
+                    dictionaries built up in different ways. The following code, for example, starts with an empty dictionary and fills it out one key at a time. Unlike out-of-bounds assignments in lists, which are forbidden, assignments to new dictionary keys create those keys:
+                </p>
+                <code>
+                    >>> D = {}
+                    >>> D['name'] = 'Bob' 
+                    >>> D['job'] = 'dev'
+                    >>> D['age'] = 40
+                    >>> D
+                    {'age': 40, 'job': 'dev', 'name': 'Bob'}
+                    >>> print(D['name'])
+                    Bob
+                </code>
+                <li>Here, we’re effectively using dictionary keys as field names in a record that describes
+                    someone. In other applications, dictionaries can also be used to replace searching
+                    operations—indexing a dictionary by key is often the fastest way to code a search in
+                    Python.</li>
+        <section class="main-section" id="FOR_LOOPS"> 
+            <header> FOR LOOPS </header>
+                <p> As mappings, as we’ve already seen, dictionaries only support accessing items by key.
+                    However, they also support type-specific operations with method calls that are useful
+                    in a variety of common use cases.
+                    </p>
+                <p> As mentioned earlier, because dictionaries are not sequences, they don’t maintain any
+                    dependable left-to-right order. This means that if we make a dictionary and print it
+                    back, its keys may come back in a different order than that in which we typed them:</p>
+                <code>>>> D = {'a': 1, 'b': 2, 'c': 3}
+                    >>> D
+                    {'a': 1, 'c': 3, 'b': 2}</code>
+                    <li>There is also sorted call returns which returns results and sorts a variety of object types, in this case sorting dictionary keys automatically:</li>
+                <code>
+                    >>> D
+                    {'a': 1, 'c': 3, 'b': 2}
+                    >>> for key in sorted(D):
+                     print(key, '=>', D[key])
+                    a => 1
+                    b => 2
+                    c => 3</code>
+                
+            </section>
+
+    </main>
+</body>
+</html>
